@@ -1,0 +1,253 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: linear-gradient(135deg, #2e7d32 0%, #81c784 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: #1b5e20;
+    border-bottom: 3px solid #4caf50;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    font-size: 1.8em;
+}
+
+.intro {
+    font-size: 1.2em;
+    background-color: #e8f5e9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #2e7d32;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #4caf50;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #4caf50;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 4px #e8f5e9;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #e8f5e9;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #e8f5e9;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #e8f5e9;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #e8f5e9 transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: #e8f5e9;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid #c8e6c9;
+}
+
+.content h3 {
+    color: #1b5e20;
+    margin-top: 0;
+    border-bottom: 2px dashed #a5d6a7;
+    padding-bottom: 8px;
+}
+
+.testimonial {
+    background-color: white;
+    border-left: 5px solid #4caf50;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 0 8px 8px 0;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #2e7d32;
+    margin-top: 15px;
+    text-align: right;
+    font-style: italic;
+}
+
+.image-gallery {
+    display: none; /* Removendo a galeria de imagens */
+}
+
+.comparison {
+    display: flex;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.comparison div {
+    flex: 1;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 5px solid #4caf50;
+}
+
+.comparison h3 {
+    color: #1b5e20;
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.comparison ul {
+    padding-left: 20px;
+}
+
+.comparison li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .container::before {
+        left: 60px;
+        border: medium solid #e8f5e9;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #e8f5e9 transparent transparent;
+    }
+    
+    .left::after, .right::after {
+        left: 15px;
+    }
+    
+    .right {
+        left: 0%;
+    }
+    
+    .comparison {
+        flex-direction: column;
+    }
+    
+    .comparison div {
+        margin: 10px 0;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+}
